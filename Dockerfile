@@ -54,4 +54,4 @@ RUN mkdir -p uploads
 EXPOSE 3000
 
 # Сначала применяем миграции, потом стартуем приложение
-CMD ["sh", "-c", "npx prisma migrate deploy --config prisma.config.ts && node dist/src/main.js 2>&1; echo done"]
+CMD ["sh", "-c", "npx prisma migrate deploy --config prisma.config.ts && echo STARTING && node dist/src/main.js"]
